@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade sms</title>
+    <link rel="stylesheet" href="./css/sms.css">
+</head>
+<body>
+    <h1 id="title">mensagens</h1>
+    <!--link api-->
+    <form action="https://barth.com.br/ApiChatCliqx/chat/verificarMensagem.php?origem=<nome_origem>&destino=<nome_destino>" method="post"></form>
+        
+        <!--div global-->
+        <div class="div_global">
+        <div id="fundo">
+                <img id="imagem_fundo" src="https://i.pinimg.com/originals/62/40/b6/6240b66d5c50c8661eee78b439a7d33c.jpg" alt="imagem_fundo">
+             </div>
+
+            <!--input origem-->
+            <div id="input_origem">
+                <label>Origem:</label>
+                <input type="text" id="input_origem">
+            </div>
+            <!--fim do input origem-->
+
+            <!--input destino-->
+            <div id="input_destino" >
+                <label>Destino:</label>
+                <input type="text" id="input_destino">
+            </div>
+            <!-- fim input destino-->
+            
+            <!--campo para mostrar as mensagens-->
+            <div id="campo_mensagens"></div>
+            <!--campo para mostrar as mensagens-->
+
+            <!--textarea-->
+            <div id="input_enviar">
+                <textarea 
+                name="enviar" 
+                id="input_enviar" 
+                cols="50" 
+                rows="7">
+                </textarea>
+            </div>
+            <!--fim textarea-->
+
+            <!--botão enviar-->
+            <div id="botao_enviar">
+                <button id="botao_enviar" onclick="pesquisar()">Enviar</button>
+            </div>
+             <!--fim botão enviar-->
+             <div id="logo">
+                 <img id="imagem_logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEX///8AAAAeHh7u7u5hYWFLS0vc3NzPz8+2trbz8/NpaWmwsLD39/dmZma6urq9vb1bW1vm5uYTExMMDAzDw8NycnJVVVWqqqpSUlIzMzPW1tYtLS3GxsZubm4YGBhJSUlAQEDTgcOOAAADsElEQVR4nO2c61biMBhFPyhKQS5yEa/ovP9TjkwdQeCkTUnSsNz7ryXJ9qyTpLiWZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFDPeHCNjD0Ml71rZOlh2O96sa3oY4hh9mCIYf5giGH+YIjhnuf1y7ALXtbPiQx7r28eY4Xj7TVVhp88TKJ5KCYPdYsK28PVOprKedar2jWF3mmSxlgfYATDXj9djOtmC/IY8eeAGzXkNk2Mk61awM+VtTeclKoDSdooG7gqJ4EMCyum6rcYvY26gdPPdQUzNJupeXpxY1zLeWefPw1paKOBmmo7iiO3m1Q2cPBv0qCGZqWa7X0eQW7H/F1NWVYPBDa0QsYYpY26gYPvFQU2dMQYYVPVl5jy+5nwhunaWNfAigiGjhj7Ids4l5eY8vCxKIZW3KvJx6HaOBmrKe6P1hLF0OxOzR/obNRn4N3Rk7EMHVecAG3UDZyeLiSWoaONy0vbOJd/uyxPH45oGKuNjRv4tYqIho4Ye+1jnMsxzwRosQ0dV5yt+EQNhT4D1RLiGrraOPOU2zHzaWBFdEMbydf/qe+mOpL780YPFd/QdTb6xajfP4/PwENSGLo21eYxjvy20P3kKQwdMa6abqpz+RrhCtCSGdpIxjhoEqN+X7mv+3gqQ7NHtcYGbdQNfKz9bDpDW7Rto6OBi/ppExq6NlVXG/UlpqaBFUkNHZvq6TvB/4/IM9C9he4HSGro2lTPX0rkV+nNArT0hlY8qSWfueLoS8xT8wlTG7raeByjfjVpGqB1YmiFvqkeDqMbuPGarQNDR4zLfYylfI3wCNC6MrTiRi1/UL3+T+Ql5sZ3qm4MXVecXYy6gfWXmCM6M3Rccaa3+gxscIk5ojtDV4wK7wCtW0PH2XiW5mfgj0m6NPSLsU2A1rmho41HtGhgRdeGrivOIX5n4CHdGzZpY7sGfg3fvWF9G1s2sCILQ1u4Ynxq28CKPAxdMV4UoOVjqNp4SQO/Bs7F8HyMlwZoWRmetvHCBlbkZHgcY4AALTdDW+xf/zchArTsDPcxhgnQMjSsvp6RX5+2GC87Q7Phn2HA0XI0DAuGGgxzAUMNhrmAoQbDXMBQg2EuYKjBMBcw1GCYCxhqMMwFDDUY5gKGGgxzAUMNhrmAoQbDXMBQg2EuYKj5bYbx/lvZpYwCGQ5vc2UYyPBawBDD/MEQw/zBEMP8wfB3Gcr/35s17x6Gm4+b6+Nj42EIAAAAAAAAAAAAAAAAAAAAAABwnfwFMtFIZ1c+VYwAAAAASUVORK5CYII=" alt="logo">
+             </div>
+
+             <!--<div id="fundo">
+                <img id="imagem_fundo" src="https://tm.ibxk.com.br/2016/09/13/13162448904561.jpg?ims=1200x675" alt="imagem_fundo">
+             </div>-->
+        </div>
+        <!--fim da div global-->
+    </form>
+    
+    <script src="./javascript/main.js"></script>
+</body>
+</html>
