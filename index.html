@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>atividade sms</title>
-    <link rel="stylesheet" href="./css/sms.css">
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
     <h1 id="title">mensagens</h1>
     <!--link api-->
-    <form action="https://barth.com.br/ApiChatCliqx/chat/verificarMensagem.php?origem=<nome_origem>&destino=<nome_destino>" method="post"></form>
+    <!--<form action="https://barth.com.br/ApiChatCliqx/chat/verificarMensagem.php?origem=gabs&destino=gilds" method="post">-->
         
         <!--div global-->
         <div class="div_global">
@@ -19,28 +19,33 @@
              </div>
 
             <!--input origem-->
-            <div id="input_origem">
+            <div class="input_origem">
                 <label>Origem:</label>
-                <input type="text" id="input_origem">
+                <input type="text" id="id_input_origem">
             </div>
             <!--fim do input origem-->
 
             <!--input destino-->
-            <div id="input_destino" >
+            <div class="input_destino" >
                 <label>Destino:</label>
-                <input type="text" id="input_destino">
+                <input type="text" id="id_input_destino">
             </div>
             <!-- fim input destino-->
+            <div>
+                <ul id="exibir" style="list-style: none;"></ul>
+            </div>
             
             <!--campo para mostrar as mensagens-->
-            <div id="campo_mensagens"></div>
+            <div class="campo_mensagens" >
+                
+            </div>
             <!--campo para mostrar as mensagens-->
 
             <!--textarea-->
-            <div id="input_enviar">
+            <div class="input_enviar">
                 <textarea 
-                name="enviar" 
-                id="input_enviar" 
+                name="" 
+                id="id_input_enviar" 
                 cols="50" 
                 rows="7">
                 </textarea>
@@ -49,7 +54,7 @@
 
             <!--botão enviar-->
             <div id="botao_enviar">
-                <button id="botao_enviar" onclick="pesquisar()">Enviar</button>
+                <button id="botao_enviar" onclick="criar()">Enviar</button>
             </div>
              <!--fim botão enviar-->
              <div id="logo">
